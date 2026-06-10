@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/* commonここから */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+body {
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #222;
+  line-height: 1.8;
+  margin-bottom: 100px;
+
+  @media (min-width: 600px) {
+    margin: 100px 0 0;
+  }
+}
+
+a.btn {
+  background: #32929D;
+  color: white;
+  padding: 24px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+a.btn:hover {
+  opacity: 0.8;
+}
+
+h2 {
+  margin-top: 128px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-text,
+.about-text,
+.skill-text,
+.contact-text {
+  display: inline-block;
+  text-align: left;
+  margin-top: 64px;
+}
+
+.card-wrap {
+
+  .card-box {
+    border: 1px solid #BEDCDF;
+    border-radius: 8px;
+    margin-top: 36px;
+
+    .card-header {
+      background: #BEDCDF;
+      padding: 16px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 16px;
+        margin-left: 16px;
+      }
+    }
+
+    .card-body {
+      text-align: left;
+      padding: 16px;
+
+      .card-img img {
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid #BEDCDF;
+        margin-bottom: 16px;
+      }
+
+      div.card-cont+div.card-cont {
+        margin-top: 36px;
+      }
+    }
+  }
+}
+
+#about,
+#skills,
+#works,
+#contact {
+  scroll-margin-top: 120px;
+}
+
+/* commonここまで */
+
+header {
+  background: #BEDCDF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+
+  nav {
+    text-align: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: #222;
+      padding: 36px 16px;
+    }
+
+    ul li a:hover {
+      opacity: 0.8;
+      background: #32929D;
+      color: white;
+    }
+  }
+
+  @media (min-width: 600px) {
+    top: 0;
+    bottom: auto;
+  }
+
+}
+
+main {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 234px 0 64px;
+  text-align: center;
+
+  #hero {
+
+    h1 {
+      font-size: 48px;
+    }
+
+    .btn-box {
+      margin-top: 36px;
+
+      a+a {
+        margin-left: 36px;
+      }
+    }
+  }
+
+  #about {
+    margin-top: 256px;
+  }
+
+  #works {
+
+    .work-body {
+      padding: 0;
+    }
+
+    h3 {
+      margin-left: 16px;
+    }
+
+    .works-img01 {
+      object-fit: contain;
+    }
+
+    .card-cont {
+      padding: 0 16px;
+    }
+
+    .card-btn {
+      padding: 0 16px 16px;
+    }
+
+    .btn {
+      padding: 16px;
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+
+  #contact {
+
+    .contact-text {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 600px) {
+    max-width: 800px;
+
+    .card-wrap {
+      display: grid;
+      grid-template:
+        ". ." 1fr
+        /1fr 1fr;
+      gap: 16px;
+    }
+
+    #works .card-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #works .work-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #works .card-btn {
+      margin-top: auto;
+    }
+  }
+}
+
+footer {
+  background: #32929D;
+  color: white;
+  padding: 36px;
+  text-align: center;
+
+  small {
+    font-size: 14px;
+  }
+}
