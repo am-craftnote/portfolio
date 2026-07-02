@@ -45,6 +45,12 @@ a.btn:hover {
   opacity: 0.8;
 }
 
+a.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
 h2 {
   margin-top: 128px;
   text-align: center;
